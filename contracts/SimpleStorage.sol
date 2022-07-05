@@ -2,7 +2,7 @@
 //Makes sharing code easier
 pragma solidity 0.8.8; // ^0.8.7; Any compiler above version 0.8.7 will work
 
-contract SimpleStorage {
+contract SimpleStorage { //contract similar to class
    
    uint256 favouriteNumber; //initialized to 0 its a global variable
   People [] public people;//dynamic array: size not defined
@@ -20,7 +20,7 @@ contract SimpleStorage {
     function store (uint256 _favouriteNumber) public {
         favouriteNumber = _favouriteNumber; 
     }
-    //view, pure 
+    //view, pure dont modify state of fn
     function retrieve() public view returns(uint256){
            return favouriteNumber;
         }
